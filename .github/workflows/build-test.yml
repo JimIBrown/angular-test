@@ -1,0 +1,23 @@
+name: angular-docker-image
+
+on:
+  push:
+    branches:
+      - main
+      - develop
+      - feature/*
+      - release/*
+      - support/*
+      - hotfix/*
+    paths:
+     - src/**
+     - build/**
+     - .github/workflows/build-test.yml
+  pull_request:
+  workflow_dispatch:
+  
+jobs:
+  call-workflow:
+    uses: JimIBrown/actions-workflows/.github/workflows/angular-docker-image.yml@main
+    with:
+      dockerRepo: 'DOCKER_REPO'
