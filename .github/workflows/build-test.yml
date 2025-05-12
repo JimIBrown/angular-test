@@ -20,4 +20,4 @@ jobs:
   call-workflow:
     uses: JimIBrown/actions-workflows/.github/workflows/angular-docker-image.yml@main
     with:
-      dockerRepo: 'DOCKER_REPO'
+      dockerRepo: 'docker_repo'
